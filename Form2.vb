@@ -1,17 +1,13 @@
-﻿Public Class Form2
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
+Public Class Form2
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 
     Private Sub ajoute_Click(sender As Object, e As EventArgs)
-        Dim l As livre
-        l.ISBN = TAB_isbn.text
-        l.ISBN = TAB_titre.text
-        l.ISBN = TAB_auteur.text
+        Dim l As Livre
+        l.ISBN = TAB_isbn.Text
+        l.ISBN = TAB_titre.Text
+        l.ISBN = TAB_auteur.Text
         If AjouterLivre(l) Then
             MessageBox.Show("ajout du livre avec succes")
         Else
@@ -21,9 +17,10 @@
     End Sub
 
     Private Sub affiche_Click(sender As Object, e As EventArgs)
-        Form2.Show
-        afficher_livre(Form2.l1, Form.l2, Form.l3)
+        Dim displayForm As New Form2() ' Replace with the name of the form you want to display
+        displayForm.Show()
     End Sub
+
 
     Private Sub TextBox1_TextChanged_1(sender As Object, e As EventArgs)
 
